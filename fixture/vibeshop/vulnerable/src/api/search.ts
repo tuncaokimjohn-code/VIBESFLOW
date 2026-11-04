@@ -1,0 +1,9 @@
+import type { ShopDatabase } from "../data/database.ts";
+import type { ShopRequest } from "../types/http.ts";
+import { readSearchTerm } from "./input.ts";
+
+export async function searchProducts(request: ShopRequest, database: ShopDatabase) {
+  const term = readSearchTerm(request.query.q);
+  const sql = `SELECT id, name, description, price_cents, active FROM products WHERE active = TRUE AND LOWER(name) LIKE LOWER('%${term}%') ORDER BY name LIMIT 24`;
+  return database.queryProducts(sql, []);
+}

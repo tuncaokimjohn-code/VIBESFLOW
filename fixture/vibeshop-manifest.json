@@ -1,0 +1,239 @@
+{
+  "fixture": "VIBESHOP_DEMO_001/vibeshop",
+  "pinnedCommit": "0d3a613f70dbb9df83c3dab57b671a2432bbb28c",
+  "scope": "git-tracked *.ts/*.tsx only; no .git, node_modules, binaries, .env or secrets",
+  "fileCount": 46,
+  "totalBytes": 28132,
+  "files": [
+    {
+      "path": "vulnerable/src/ui/format.ts",
+      "bytes": 301,
+      "sha256": "d5acfe2a0f99083159047781518683affbe7ed935d2f029b42f8fb5bdb3b366f"
+    },
+    {
+      "path": "vulnerable/src/ui/Storefront.tsx",
+      "bytes": 1249,
+      "sha256": "d0ebeb9794013e12136dac70d44eb4a15799f497dadf25511415ea73e1bdbbcb"
+    },
+    {
+      "path": "vulnerable/src/ui/ReviewCard.tsx",
+      "bytes": 346,
+      "sha256": "640740b3a84bdc1592b9a8dec2d540dd97db6e1e9ae5695fef1ae781d6eb1cfa"
+    },
+    {
+      "path": "vulnerable/src/ui/ProductCard.tsx",
+      "bytes": 383,
+      "sha256": "180ea8847681747ce2c6b5a3c844a6fb7f09bbef503b3810b445f561603ba85b"
+    },
+    {
+      "path": "vulnerable/src/ui/OrderSummary.tsx",
+      "bytes": 477,
+      "sha256": "0455b1e9016fc8a85cd7f000b14ac35dd47efab7ef15ebcb680b216319d6f999"
+    },
+    {
+      "path": "vulnerable/src/types/models.ts",
+      "bytes": 887,
+      "sha256": "d618995e263fc84a8726da70f1057d1afdfb038e22c2ffdab1c05d2b24e8bb7c"
+    },
+    {
+      "path": "vulnerable/src/types/http.ts",
+      "bytes": 369,
+      "sha256": "5e886f553f435909566de06f6e198ce81f09f0d20fddac3eea3084b9ac3cc944"
+    },
+    {
+      "path": "vulnerable/src/index.ts",
+      "bytes": 280,
+      "sha256": "363060c3c67871dbc5f233a4f981a32e3e09ade73bb32e03c1f0107f5d0b52c4"
+    },
+    {
+      "path": "vulnerable/src/data/orders.ts",
+      "bytes": 389,
+      "sha256": "a20335d17d2b8f45b4615c30990a6d2be104f739b47bead193aa540e1f118a54"
+    },
+    {
+      "path": "vulnerable/src/data/fixtures.ts",
+      "bytes": 649,
+      "sha256": "4779f90f33d571223f0d367e3bc9d977e175698d327302d5fdb66fa324e52c4a"
+    },
+    {
+      "path": "vulnerable/src/data/database.ts",
+      "bytes": 647,
+      "sha256": "dca68337ee1e7c35387888911fe35e1d9fb33233548a13d445f928d541b5d056"
+    },
+    {
+      "path": "vulnerable/src/data/catalog.ts",
+      "bytes": 348,
+      "sha256": "42e45f7d2ebc089de69bf3c8fc49c247420f2ec635bb339d1efe7d540339b80b"
+    },
+    {
+      "path": "vulnerable/src/config/settings.ts",
+      "bytes": 372,
+      "sha256": "39f473c71a48d2b01b82d58ebaf84e3b46f894f503a80706e6eec025aba11ffd"
+    },
+    {
+      "path": "vulnerable/src/config/secret-source.ts",
+      "bytes": 76,
+      "sha256": "3f7bcfa5c72700b4e15b1ac1f4b3cd45396ea0061bfc00b4bbbafa8b05a603aa"
+    },
+    {
+      "path": "vulnerable/src/auth/session.ts",
+      "bytes": 1115,
+      "sha256": "31fb0ea13bae5221a0a703fefa20d90b4d42743f8a4340ff6449325994d5eac9"
+    },
+    {
+      "path": "vulnerable/src/auth/permissions.ts",
+      "bytes": 276,
+      "sha256": "495e008a351e95b6c2016de043952e51f2dead6d193828a5d88d7568ca001ba9"
+    },
+    {
+      "path": "vulnerable/src/application.ts",
+      "bytes": 1711,
+      "sha256": "3896594c69823f5c7743468e0e1bf63af8b20af4e410b1830a458b08ff83610d"
+    },
+    {
+      "path": "vulnerable/src/api/search.ts",
+      "bytes": 497,
+      "sha256": "9de4e7bd048888ca27abd59b156c0aeb0a88177c63080c79ff973da01b61f8ca"
+    },
+    {
+      "path": "vulnerable/src/api/products.ts",
+      "bytes": 688,
+      "sha256": "9249b2deab5d83a5ebda398b0896fa8cbf38e922be0cb41727ffab00f3fd5e53"
+    },
+    {
+      "path": "vulnerable/src/api/order.ts",
+      "bytes": 634,
+      "sha256": "b07bcd6ddd132245c9f43cd29d9478c66783d779e85fb262aeef2a82909c5652"
+    },
+    {
+      "path": "vulnerable/src/api/input.ts",
+      "bytes": 1373,
+      "sha256": "5f835952706797f62db14a1a2f592de46353d04996a5a708134c069adfd921cc"
+    },
+    {
+      "path": "vulnerable/src/api/customer.ts",
+      "bytes": 669,
+      "sha256": "b75441462c3e589b1ca2c0856ce03fc95f5c0a8e27d580d6b99393d5b2c50544"
+    },
+    {
+      "path": "vulnerable/src/api/catalog.ts",
+      "bytes": 195,
+      "sha256": "8aa0f9afe73c0e51313a31877fc77cdc716bc1facb9a37114f36be413ec6b35b"
+    },
+    {
+      "path": "safer/src/ui/format.ts",
+      "bytes": 301,
+      "sha256": "d5acfe2a0f99083159047781518683affbe7ed935d2f029b42f8fb5bdb3b366f"
+    },
+    {
+      "path": "safer/src/ui/Storefront.tsx",
+      "bytes": 1249,
+      "sha256": "d0ebeb9794013e12136dac70d44eb4a15799f497dadf25511415ea73e1bdbbcb"
+    },
+    {
+      "path": "safer/src/ui/ReviewCard.tsx",
+      "bytes": 309,
+      "sha256": "dbfccdc6838589154a1b63aea3a6e0a5b3240990955a50408a6a83c41c96c878"
+    },
+    {
+      "path": "safer/src/ui/ProductCard.tsx",
+      "bytes": 383,
+      "sha256": "180ea8847681747ce2c6b5a3c844a6fb7f09bbef503b3810b445f561603ba85b"
+    },
+    {
+      "path": "safer/src/ui/OrderSummary.tsx",
+      "bytes": 477,
+      "sha256": "0455b1e9016fc8a85cd7f000b14ac35dd47efab7ef15ebcb680b216319d6f999"
+    },
+    {
+      "path": "safer/src/types/models.ts",
+      "bytes": 887,
+      "sha256": "d618995e263fc84a8726da70f1057d1afdfb038e22c2ffdab1c05d2b24e8bb7c"
+    },
+    {
+      "path": "safer/src/types/http.ts",
+      "bytes": 369,
+      "sha256": "5e886f553f435909566de06f6e198ce81f09f0d20fddac3eea3084b9ac3cc944"
+    },
+    {
+      "path": "safer/src/index.ts",
+      "bytes": 280,
+      "sha256": "363060c3c67871dbc5f233a4f981a32e3e09ade73bb32e03c1f0107f5d0b52c4"
+    },
+    {
+      "path": "safer/src/data/orders.ts",
+      "bytes": 389,
+      "sha256": "a20335d17d2b8f45b4615c30990a6d2be104f739b47bead193aa540e1f118a54"
+    },
+    {
+      "path": "safer/src/data/fixtures.ts",
+      "bytes": 649,
+      "sha256": "4779f90f33d571223f0d367e3bc9d977e175698d327302d5fdb66fa324e52c4a"
+    },
+    {
+      "path": "safer/src/data/database.ts",
+      "bytes": 647,
+      "sha256": "dca68337ee1e7c35387888911fe35e1d9fb33233548a13d445f928d541b5d056"
+    },
+    {
+      "path": "safer/src/data/catalog.ts",
+      "bytes": 348,
+      "sha256": "42e45f7d2ebc089de69bf3c8fc49c247420f2ec635bb339d1efe7d540339b80b"
+    },
+    {
+      "path": "safer/src/config/settings.ts",
+      "bytes": 543,
+      "sha256": "496aa0971e51ba8380f1c55b71d5f235615ceeb02015667ef45beecdf7096c40"
+    },
+    {
+      "path": "safer/src/config/secret-source.ts",
+      "bytes": 76,
+      "sha256": "3f7bcfa5c72700b4e15b1ac1f4b3cd45396ea0061bfc00b4bbbafa8b05a603aa"
+    },
+    {
+      "path": "safer/src/auth/session.ts",
+      "bytes": 1115,
+      "sha256": "31fb0ea13bae5221a0a703fefa20d90b4d42743f8a4340ff6449325994d5eac9"
+    },
+    {
+      "path": "safer/src/auth/permissions.ts",
+      "bytes": 276,
+      "sha256": "495e008a351e95b6c2016de043952e51f2dead6d193828a5d88d7568ca001ba9"
+    },
+    {
+      "path": "safer/src/application.ts",
+      "bytes": 1711,
+      "sha256": "3896594c69823f5c7743468e0e1bf63af8b20af4e410b1830a458b08ff83610d"
+    },
+    {
+      "path": "safer/src/api/search.ts",
+      "bytes": 504,
+      "sha256": "637cb8256aeca7d6e31d8b5535e7db9f7de42c9c5513492cd64e308b604cfbbf"
+    },
+    {
+      "path": "safer/src/api/products.ts",
+      "bytes": 783,
+      "sha256": "e834281b68c8876c56565873bfe7549ca89d77b1d3fd49f27ff6cdfff6f6b87c"
+    },
+    {
+      "path": "safer/src/api/order.ts",
+      "bytes": 668,
+      "sha256": "9d3cbe791f8f4fff4f38b4d0ed1d964f01958e270bc96648068d7da751a0f10b"
+    },
+    {
+      "path": "safer/src/api/input.ts",
+      "bytes": 1373,
+      "sha256": "5f835952706797f62db14a1a2f592de46353d04996a5a708134c069adfd921cc"
+    },
+    {
+      "path": "safer/src/api/customer.ts",
+      "bytes": 669,
+      "sha256": "b75441462c3e589b1ca2c0856ce03fc95f5c0a8e27d580d6b99393d5b2c50544"
+    },
+    {
+      "path": "safer/src/api/catalog.ts",
+      "bytes": 195,
+      "sha256": "8aa0f9afe73c0e51313a31877fc77cdc716bc1facb9a37114f36be413ec6b35b"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+# Installed dependencies and generated/build/cache output
+node_modules/
+.next/
+.vitest-cache/
+.cache/
+.tmp/
+.runtime/
+__pycache__/
+*.pyc
+*.tsbuildinfo
+next-env.d.ts
+coverage/
+dist/
+out/
+*.log
+
+# Environment files and credential containers: none are required to run the clone
+.env
+.env.*
+**/.env
+**/.env.*
+.npmrc
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# Private operator/runtime records; never create or copy these into the repository
+.c0*/
+approval.json
+attempt.lock
+result-bundle.json
+outcome.json
+failure.json
+operator-private*
+operator-exit.json
+preview-private*
+*publication-approval*
+
+# Local qualification and release-preparation output
+/evidence/
+/handoff/
+/validation/
+/integration_artifacts/
+/release_preparation/
+.DS_Store

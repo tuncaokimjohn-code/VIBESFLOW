@@ -10,6 +10,8 @@ import type { GitHubAstSuccess } from "@/lib/github-ast-contract";
 import type { DetectionResult } from "@/lib/security-findings";
 import { PublicFindingEvidence } from "@/components/PublicFindingEvidence";
 import { publicFindingEvidence } from "@/lib/public-evidence";
+import { PublicMusePanel } from "@/components/PublicMusePanel";
+import { bindingFor, evidenceId } from "@/lib/public-muse-contract";
 import { scanPublicAnalysis } from "@/lib/public-analysis";
 import { getInspectorHashServerSnapshot, getInspectorHashSnapshot, subscribeInspectorHashStore } from "@/lib/inspector-hash";
 import { publicViewForHash, type PublicView } from "@/lib/public-navigation";
@@ -17,7 +19,7 @@ import { publicViewForHash, type PublicView } from "@/lib/public-navigation";
 type Scan = { status: "running" } | { status: "done"; result: DetectionResult };
 
 /** Keyed by accepted result identity: replacement always discards selections/scan. */
-export function PublicAnalysisResult({ live, view = "all" }: { live: GitHubAstSuccess; view?: PublicView | "all" }) {
+export function PublicAnalysisResult({ live, view = "all", museActive = true }: { live: GitHubAstSuccess; view?: PublicView | "all"; museActive?: boolean }) {
   const [scan, setScan] = useState<Scan>({ status: "running" });
   const [selected, setSelected] = useState<string | null>(null);
   const [findingIndex, setFindingIndex] = useState<number | null>(null);
@@ -36,6 +38,10 @@ export function PublicAnalysisResult({ live, view = "all" }: { live: GitHubAstSu
   const finding = findingIndex === null ? null : result?.findings[findingIndex];
   const evidenceRows = useMemo(() => result?.findings.map(f => publicFindingEvidence(live, f)) ?? [], [live, result]);
   const activeEvidence = findingIndex === null ? null : evidenceRows[findingIndex];
+  const museBinding = useMemo(() => {
+    if (!museActive || !finding || activeEvidence?.status !== "verified") return null;
+    try { return bindingFor(live.requested.owner, live.requested.repo, finding); } catch { return null; }
+  }, [museActive, live, finding, activeEvidence]);
   const rawNode = live.graph.nodes.find(n => presentation.nodeId(n.id) === selected);
   const file = live.snapshot.files.find(f => f.path === (finding?.path ?? rawNode?.module));
   const moduleLabel = (path: string) => aliases.get(presentation.nodeId(moduleNodeId(path))) ?? "Source module";
@@ -86,6 +92,7 @@ export function PublicAnalysisResult({ live, view = "all" }: { live: GitHubAstSu
             <p>Module source is withheld. Select a potential finding for independently verified source evidence.</p>
           </> : <p>Select a module or finding to inspect its source evidence.</p>}
         </div>
+        {museBinding && <PublicMusePanel key={`${live.snapshot.snapshotId}:${evidenceId(museBinding)}`} binding={museBinding} />}
       </section>
     </div>
   </>;
@@ -111,12 +118,12 @@ export function PublicRepositoryWorkspace() {
       <p className="break-all">{attempt.requested ? `${attempt.requested.owner}/${attempt.requested.repo} · ref ${attempt.requested.ref ?? "default branch"}` : "No valid repository locator"}</p>
       <p>{attempt.code ? `${attempt.code}: ` : ""}{attempt.message}</p>
     </section>}
-    {live && <PublicAnalysisResult key={`${live.requested.owner}/${live.requested.repo}/${live.snapshot.snapshotId}`} live={live} view={view} />}
+    {live && <PublicAnalysisResult key={`${live.requested.owner}/${live.requested.repo}/${live.snapshot.snapshotId}`} live={live} view={view} museActive={realStatus === "success"} />}
     {!live && (view === "architecture" || view === "findings") && <p>No source is available for this {view} view. Inspect a public repository to begin.</p>}
     {view === "compare" && <section id="public-readiness" aria-label="Comparison readiness" className="rounded-lg border p-4" style={{ borderColor: "var(--vf-border)" }}><h2 className="text-xl font-semibold">Comparison: NOT READY</h2><p>Independently imported and scanned vulnerable/safer snapshots are required. No comparison has run; no safer result or preview success is substituted.</p></section>}
     {view === "evaluation" && <section id="public-evaluation" aria-label="Evaluation readiness" className="rounded-lg border p-4" style={{ borderColor: "var(--vf-border)" }}><h2 className="text-xl font-semibold">Evaluation: NOT MEASURED</h2><p>Independent blind-test precision and recall have not been measured. No accuracy or evaluation success is claimed.</p></section>}
     <footer className="mt-4 rounded-lg border p-4 text-sm" style={{ borderColor: "var(--vf-border)" }}>
-      <p>Muse explanation: NOT READY for imported repositories. Operator-authorized saved results are available only for the controlled synthetic fixture.</p>
+      <p>Muse explanation: NOT READY for live imported repositories — Meta Direct is NOT CONFIGURED. Select a supported finding for the consent flow. Public paid requests stay disabled until shared durable quota and provider cost bounds are provisioned. Offline responses are explicitly marked as mocks.</p>
       <p>Comparison: NOT READY — independently scanned vulnerable/safer snapshots are pending.</p>
       <p>Evaluation: NOT MEASURED — independent blind-test precision and recall are pending.</p>
       <p>Security parsing is bounded and cooperative; large files can delay browser input.</p>

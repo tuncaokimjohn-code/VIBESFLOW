@@ -10,7 +10,7 @@ This source export comes from Chief-approved Canonical RC001. Application code, 
 
 **[▶ Watch the VibeFlow Inspector AI demo on YouTube](https://youtu.be/Npr_WJGDkcY)**
 
-**[🌐 Open the live VibeFlow Inspector AI demo](https://vibeflowinspectorai.vercel.app/demo/vibeshop)**
+**[🌐 Visit the official VibeFlow Inspector AI website](https://vibeflowinspectorai.vercel.app/)**
 
 The hackathon video demonstrates read-only repository inspection, the architecture graph, evidence-linked potential findings, and live Meta Muse explanations for selected findings. The recorded demo is a prototype, not a comprehensive vulnerability scanner; not every finding or workflow is supported end to end.
 

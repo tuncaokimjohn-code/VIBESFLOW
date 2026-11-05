@@ -4,6 +4,16 @@ Read-only TypeScript/TSX source inspection with an evidence-linked architecture 
 
 This source export comes from Chief-approved Canonical RC001. Application code, fixture bytes, dependency pins and security boundaries are unchanged. Workspace-only operator launchers, private runtime state, historical QA evidence and local publication approvals are excluded.
 
+## 🎥 Hackathon demo
+
+[![Watch the VibeFlow Inspector AI Demo](https://img.shields.io/badge/YouTube-Watch%20Demo-red?logo=youtube)](https://youtu.be/Npr_WJGDkcY)
+
+**[▶ Watch the VibeFlow Inspector AI demo on YouTube](https://youtu.be/Npr_WJGDkcY)**
+
+**[🌐 Open the live VibeFlow Inspector AI demo](https://vibeflowinspectorai.vercel.app/demo/vibeshop)**
+
+The hackathon video demonstrates read-only repository inspection, the architecture graph, evidence-linked potential findings, and live Meta Muse explanations for selected findings. The recorded demo is a prototype, not a comprehensive vulnerability scanner; not every finding or workflow is supported end to end.
+
 ## Run without Muse credentials
 
 Use Node.js **24.18.0** and npm **11.16.0**, the versions used for local qualification. Registry access is needed to install the locked dependencies. The GitHub repository is currently private, so cloning requires repository access; this is separate from Muse access.
